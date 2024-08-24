@@ -1,0 +1,35 @@
+Lanzada por el usuario Mercedes Milla
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins  in C:\ProgramData\Jenkins\.jenkins\workspace\proyecto_parcial
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (python)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\proyecto_parcial>python C:/Users/Mercedes/OneDrive/Documentos/CERTUS/3_OPS/proyecto_parcial/python/script_python.py 
+[muhammadehsan000/healthcare-dataset-2019-2024, muhammadehsan000/global-electric-vehicle-sales-data-2010-2024, myrios/cost-of-living-index-by-country-by-number-2024, mrmars1010/flipkart-product-datalaptops, muhammadehsan000/olympic-historical-dataset-1896-2020, jacopoferretti/mortality-rate-in-the-usa-by-gender-area-cause, youssefismail20/olympic-games-1994-2024, waqi786/heart-attack-dataset, waqi786/powerlifting-data, abdallahwagih/company-employees, muhammadehsan000/2024-electric-car-data-washington-state, umerhaddii/imdb-summer-movies-data, decentsanage/indian-dishes-analysis-dataset, piterfm/paris-2024-olympic-summer-games, sajkazmi/paris-olympics-2024-games-dataset-updated-daily, waqi786/cats-dataset, willianoliveiragibin/ev-sales-2010-2024, neharoychoudhury/credit-card-fraud-data, muhammadroshaanriaz/cancer-dataset-risk-of-developing-or-dying, ihelon/coffee-sales]
+Dataset URL: https://www.kaggle.com/datasets/youssefismail20/olympic-games-1994-2024
+Downloading olympic-games-1994-2024.zip to C:/Users/Mercedes/OneDrive/Documentos/CERTUS/3_OPS/proyecto_parcial/dataset
+  0%|          | 0.00/15.9k [00:00<?, ?B/s]100%|##########| 15.9k/15.9k [00:00<00:00, 365kB/s]
+
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (bd)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\proyecto_parcial>SQLCMD.EXE -S LAPTOP-4F1U26VT -E -i "C:/Users/Mercedes/OneDrive/Documentos/CERTUS/3_OPS/proyecto_parcial/sql_script.sql" 
+Changed database context to 'Kaggle'.
+Msg 102, Level 15, State 1, Server LAPTOP-4F1U26VT, Line 6
+Incorrect syntax near ')'.
+Msg 4701, Level 16, State 1, Server LAPTOP-4F1U26VT, Line 3
+Cannot find the object "olympics" because it does not exist or you do not have permissions.
+Msg 102, Level 15, State 1, Server LAPTOP-4F1U26VT, Line 9
+Incorrect syntax near '0X0a'.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
